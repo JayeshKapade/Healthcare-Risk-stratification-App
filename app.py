@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import sklearn
 import joblib
 
 model = joblib.load("risk_model.pkl")
@@ -18,4 +17,3 @@ if st.button("Predict"):
 
     st.write(f"Risk Prediction: {'HIgh Risk' if prediction == 1 else 'Low Risk'}")
     st.write(f"Risk Probability: {round(probability, 2)}")
-print(sklearn.__version__)
