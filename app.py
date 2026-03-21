@@ -15,9 +15,9 @@ if st.button("Predict"):
     prediction = model.predict(input_data)[0]
     probability = model.predict_proba(input_data)[0][1]
     if prob > 0.65:
-    prediction = "High Risk"
+        prediction = "High Risk"
     else:
-    prediction = "Low Risk"
+        prediction = "Low Risk"
 
     st.write(f"Risk Prediction: {prediction}")
     st.write(f"Risk Probability: {round(probability, 2)}")
