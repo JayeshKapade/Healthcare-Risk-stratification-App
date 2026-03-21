@@ -14,7 +14,7 @@ if st.button("Predict"):
     input_data = pd.DataFrame([[Age, Length_of_stay, Treatment_cost]],
                               columns=['Age', 'LengthOfStay', 'TreatmentCost'])
 
-    prob = model.predict_proba(input_data)[0][1]   # ✅ FIRST
+    prob = model.predict_proba(input_data)[0][1]  
 
     if prob > 0.65:
         prediction = "High Risk"
